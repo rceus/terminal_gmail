@@ -20,13 +20,6 @@ gmail = Gmail.connect!(username, password)
     	body body_mail
   	end
   	gmail.deliver(email)
-  	#html_part do
-  	#  content_type 'text/html; charset=UTF-8'
-  	#  body "<p>Text of <em>HTML</em> message.</p>"
-  	#end
   	puts()
   	puts("Email sent!")
-
-
-
 gmail.logout
