@@ -14,12 +14,28 @@ gmail = Gmail.connect!(username, password)
 	puts("Enter the message: ")
 	body_mail=gets()
 	body_mail= body_mail.to_s + 'Sent from Terminal'
-	email=gmail.compose do
-  		to gid
-  		subject sub
-    	body body_mail
-  	end
-  	gmail.deliver(email)
-  	puts()
-  	puts("Email sent!")
+	
+	puts("Any attachment(y/n): ")
+	flag_attachment=gets().chomp
+	if flag_attachment.to_s =='y'
+		puts('Enter the path for the attachment:')
+		attachment_path=gets().chomp
+	elsif flag_attachment.to_s !='y'
+		puts('No attachment! Preparing to send the mail....')
+	end
+	puts("Send? Click s to send. Anything else will abort the operation.")
+	flag_send=gets().chomp
+
+	if flag_send=='s'
+		email=gmail.compose do
+  			to gid
+  			subject sub
+    		body body_mail
+  		end
+  		gmail.deliver(email)
+  		puts()
+  		puts("Email sent!")
+  	else
+  		puts("Aborted..Thanks for using Terminal Gmail")
+  	end	
 gmail.logout
