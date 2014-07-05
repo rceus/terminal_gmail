@@ -31,6 +31,7 @@ gmail = Gmail.connect!(username, password)
   			to gid
   			subject sub
     		body body_mail
+    		#add_file attachment_path
   		end
   		gmail.deliver(email)
   		puts()
