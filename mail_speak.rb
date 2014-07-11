@@ -23,7 +23,7 @@ gmail = Gmail.connect!(username, password)
 	body_mail= body_mail.to_s + 'Sent from Terminal'
 	
 	puts("Any attachment(y/n): ")
-	`say Do you want to attach something to the mail. Press y or n only.`
+	`say Do you want to attach something to the mail. Press Y or N, only.`
 	flag_attachment=gets().chomp
 	if flag_attachment.to_s =='y'
 		puts('Enter the path for the attachment:')
