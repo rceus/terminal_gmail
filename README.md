@@ -7,4 +7,4 @@ Gems used: gmail
 
 Developed by Rishabh Jain
 
-A terminal application that enables you to send emails directly via terminal saving time.
+A ruby script that accesses gmail and lets you operate directly from terminal.
