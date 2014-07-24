@@ -8,7 +8,7 @@ puts("Enter Password: ")
 `say Enter your password`
 password = gets().chomp
 
-gmail = Gmail.connect!(username, password)
+gmail = Gmail.connect(username, password)
 	puts("Authorized User!")
 	`say You are an authorized user.`
 	puts("Enter email-id of the person you want to send the email:")
