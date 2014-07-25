@@ -1,6 +1,8 @@
 Terminal Gmail
 ==============
 
+In development phase.
+
 Developed using Ruby
 
 Gems used: gmail
